@@ -12,7 +12,8 @@ public class Lesson6Lottery {
         Random rnd = new Random();
         System.out.println("Загадані " + NUMBER + " чисел у діапазоні від " + MIN_NUMBER + " до " + MAX_NUMBER);
         for (int i = 0; i < arrHidden.length; i++) {
-            arrHidden[i] = rnd.nextInt(MAX_NUMBER+1) + MIN_NUMBER;
+            arrHidden[i] = rnd.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
+
         }
         Arrays.sort(arrHidden);
 
